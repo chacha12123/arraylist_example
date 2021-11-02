@@ -1,48 +1,56 @@
-package example2.day7;
+package example2.day8;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class ArrayListTest {
 
 	public static void main(String[] args) {
 		
-		// 배열
-		int[] arr = new int[10]; // 0
+		// ArrayList -> 자료구조, 콜렉션, 동적배열
+		// 자동으로 길이가 늘어나는 배열. 추가와 삭제가 가능한 배열.
 		
-		// 리스트 => 컨트롤(좌) + 쉬프트(좌) + O
-		ArrayList<Integer> list = new ArrayList<Integer>();
+		ArrayList<Integer> list1 = new ArrayList<>();
+		ArrayList<String> list2 = new ArrayList<>();
 		
+		// 1. 사이즈(크기)
+	
+		System.out.println(list1.size()); 
+		System.out.println(list2.size()); 
 		
-		// 변수, 배열 -> 데이터를 관리(추가, 삭제, 조회, 수정)
+		// 2. 추가
+		list1.add(100);
+		list1.add(200);
+		list1.add(300);
 		
-		// 리스트 크기 확인 -> size()
-		System.out.println(list.size());
+		list2.add("사과");
+		list2.add("감");
+		list2.add("배");
 		
-		// 추가 -> add(value) 가장 마지막 요소 뒤에 추가
-		list.add(100);
-		System.out.println(list.size());
-
-		list.add(200);
-		System.out.println(list.size());
+		System.out.println("=====================");
+		System.out.println(list1.size()); 
+		System.out.println(list2.size());
+		System.out.println("=====================");
 		
-		list.add(300);
-		System.out.println(list.size());
+		// 3. 수정
+		list1.set(0, 1000);
+		list2.set(0, "오렌지");
 		
-		// 조회(데이터 가져오기) -> get(index);
-		//System.out.println(arr[0]); // 배열
-		System.out.println(list.get(0)); // 리스트
-		System.out.println(list.get(1)); // 리스트
-		System.out.println(list.get(2)); // 리스트
+		// 4. 조회
+		System.out.println(list1.get(0));
+		System.out.println(list2.get(0));
+		System.out.println("=====================");
 		
+		// 5. 삭제
+		list1.remove(1);
+		list2.remove(1);
 		
-		// 삭제 -> list.remove(index);
-		list.remove(1);
-		System.out.println(list.get(1));
+		System.out.println(list1.get(1));
+		System.out.println(list2.get(1));
 		
-		// 수정 -> list.set(index, value);
-		list.set(0, 1000);
-		System.out.println(list.get(0));
+		System.out.println("=====================");
+		System.out.println(list1.size()); 
+		System.out.println(list2.size());
+		
 		
 	}
 
